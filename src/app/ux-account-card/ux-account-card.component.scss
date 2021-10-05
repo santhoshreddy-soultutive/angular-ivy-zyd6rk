@@ -1,6 +1,5 @@
-
 @function toVw($value) {
-  @return($value * 100/ 375) + vw;
+  @return ($value * 100/ 375) + vw;
 }
 
 @function toVh($value) {
@@ -25,6 +24,8 @@ $fontWeightExtraBold: 800;
   opacity: 1;
   background-blend-mode: soft-light;
   padding-bottom: toVh(13);
+  padding-left: toVw(1);
+  padding-top: toVh(15);  
 }
 
 .active-card {
@@ -43,19 +44,20 @@ $fontWeightExtraBold: 800;
 .card {
   display: flex;
   flex-direction: column;
+  div{
+    display: flex;
+    flex-direction: column;
+  }
   p {
     margin-bottom: 0;
     &.accountnumber {
       display: flex;
       flex-direction: row;
       align-items: center;
-
-      margin-top: toVh(14.83);
-      margin-left: toVw(16.54);
       img {
         opacity: 1;
-        width: toVw(23.9);
-        height: toVh(23.33);
+        width: toVw(24);
+        height: toVh(23.43);
         margin-right: toVw(10.56);
       }
       span {
@@ -73,8 +75,6 @@ $fontWeightExtraBold: 800;
   p {
     &.accountname {
       margin-top: toVh(11.84);
-      margin-left: toVw(16);
-
       color: #656565;
       opacity: 1;
       text-align: left;
@@ -90,8 +90,6 @@ $fontWeightExtraBold: 800;
   p {
     &.balance {
       margin-top: toVh(10);
-      margin-left: toVw(16.29);
-
       color: #0b0b0b;
       opacity: 1;
       text-align: left;
@@ -107,8 +105,8 @@ $fontWeightExtraBold: 800;
 
   p {
     &.availablebalance {
-      margin-top: toVh(-28.84);
-      margin-left: toVw(16.29);
+      transform: translateY(-43.84);
+      margin-top: toVh(15);
       opacity: 0;
       span {
         display: block;
@@ -126,10 +124,9 @@ $fontWeightExtraBold: 800;
 
 .card {
   &.active-card {
+    padding-left: toVw(12);
     p {
       &.accountnumber {
-        margin-top: toVh(12.83);
-        margin-left: toVw(12);
         img {
           width: toVw(24);
           height: toVh(23.43);
@@ -150,8 +147,6 @@ $fontWeightExtraBold: 800;
 
     p {
       &.accountname {
-        margin-top: toVh(18.74);
-        margin-left: toVw(12);
         color: #656565;
         opacity: 1;
         text-align: left;
@@ -166,8 +161,6 @@ $fontWeightExtraBold: 800;
 
     p {
       &.balance {
-        margin-top: toVh(5.16);
-        margin-left: toVw(12);
         color: #0b0b0b;
         opacity: 1;
         text-align: left;
@@ -183,8 +176,6 @@ $fontWeightExtraBold: 800;
 
     p {
       &.availablebalance {
-        margin-top: toVh(14.84);
-        margin-left: toVw(12);
         opacity: 1;
         span {
           display: block;
