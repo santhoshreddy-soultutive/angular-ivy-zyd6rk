@@ -32,7 +32,7 @@ const CARD_WIDTH = toVw(214);
 const CARD_DETAIL_WIDTH = toVw(375);
 const NEWACCOUNT_WIDTH = toVw(64);
 const CARD_MOVEMENT_WIDTH = Math.floor(CARD_MARGIN + CARD_WIDTH);
-const CARD_SELECTION_ANIMATION_DURATION = CARD_DETAIL_WIDTH / 1000.0;
+const CARD_SELECTION_ANIMATION_DURATION = CARD_MOVEMENT_WIDTH / 1000.0;
 
 @Component({
   selector: "my-app",
@@ -125,6 +125,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
       availableBalanceCurrency: "EUR",
       details: txDetails,
     });
+
     this.cards.push({
       accountNumber: "DE89 5002 0000 5732 0180 92",
       accountName: "Sebastian Sberbanker 2",
@@ -134,6 +135,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
       availableBalanceCurrency: "EUR",
       details: txDetails,
     });
+    
     this.cards.push({
       accountNumber: "DE89 5002 0000 5732 0180 93",
       accountName: "Sebastian Sberbanker 3",
@@ -152,6 +154,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
       availableBalanceCurrency: "EUR",
       details: txDetails,
     });
+    */
   }
 
   setupDockAnimation() {
@@ -216,21 +219,6 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
       },
       0
     );
-     this.dockActiveCardTimeline.fromTo(
-       ".card-details-header",
-       {
-         css: {
-           paddingTop: toVh(331),
-         },
-       },
-       {
-         css: {
-           paddingTop: toVh(366),
-         },
-         ease: "none",
-       },
-       0
-     );
     this.dockActiveCardTimeline.fromTo(
       ".card-selector-container",
       {
