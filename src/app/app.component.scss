@@ -59,7 +59,7 @@ $fontWeightExtraBold: 800;
 
     img.back-arrow {
       position: absolute;
-      top: toVh(54.8);
+      top: toVh(51);
       left: toVw(33.5);
       width: toVw(15.25);
       height: toVh(7.52);
@@ -67,7 +67,7 @@ $fontWeightExtraBold: 800;
     }
     img.search {
       position: absolute;
-      top: toVh(52);
+      top: toVh(51);
       left: toVw(332);
       width: toVw(17.49);
       height: toVh(17.49);
@@ -75,10 +75,11 @@ $fontWeightExtraBold: 800;
   }
   .card-selector-container {
     top: 0;
+    width: 100%;
     position: fixed;
     touch-action: none;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
     background-color: #f4f7f5;
     z-index: 99998;
@@ -143,9 +144,6 @@ $fontWeightExtraBold: 800;
           text-align: center;
         }
       }
-
-      ux-account-card {
-      }
     }
 
     .card-selector::-webkit-scrollbar {
@@ -154,8 +152,8 @@ $fontWeightExtraBold: 800;
       height: 0px;
     }
   }
+
   .card-details-container {
-    padding-top: toVh(331);
     flex: 1;
     display: flex;
     flex-direction: row;
@@ -178,7 +176,42 @@ $fontWeightExtraBold: 800;
     width: 0px;
     height: 0px;
   }
-
+  .card-details-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: toVh(331);
+    padding-bottom: toVh(26);
+    .tab {
+      flex-shrink: 1;
+      font-size: 17px;
+      font-weight: 500;
+      color: #8d8d8d;
+      line-height: toVh(20);
+      text-align: center;
+      padding-bottom: 6px;
+      margin-right: toVw(10);
+      margin-left: toVw(10);
+      &.selected {
+        font-weight: 800;
+        color: #000014;
+        height: 1px;
+        border-radius: 3px;
+        box-shadow: 0 toVw(22) 0 0 #00a10b;
+      }
+    }
+    .tab:first-child {
+      text-align: right;
+      margin-left: 0px;
+      margin-right: toVw(10);
+    }
+    .tab:last-child {
+      text-align: left;
+      margin-left: toVw(10);
+      margin-right: 0px;
+    }
+  }
   .tabs {
     height: toVh(33);
     width: 100%;

@@ -15,40 +15,7 @@ $fontWeightExtraBold: 800;
 .card-detail {
   width: 100%;
   flex-shrink: 0;
-  .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: toVh(26);
-    .tab {
-      flex-shrink: 1;
-      font-size: 17px;
-      font-weight: 500;
-      color: #8d8d8d;
-      line-height: toVh(20);
-      text-align: center;
-      padding-bottom: 6px;
-      margin-right: toVw(10);
-      margin-left: toVw(10);
-      &.selected {
-        font-weight: 800;
-        color: #000014;
-        height: 1px;
-        border-radius: 3px;
-        box-shadow: 0 toVw(22) 0 0 #00a10b;
-      }
-    }
-    .tab:first-child {
-      text-align: right;
-      margin-left: 0px;
-      margin-right: toVw(10);
-    }
-    .tab:last-child {
-      text-align: left;
-      margin-left: toVw(10);
-      margin-right: 0px;
-    }
-  }
+
   .content {
     .item {
       display: flex;
@@ -95,7 +62,7 @@ $fontWeightExtraBold: 800;
             line-height: 17px;
           }
           .txmerchant {
-            color: #140F26;
+            color: #140f26;
             text-align: left;
             font-size: 14px;
             font-weight: $fontWeightExtraBold;
@@ -124,7 +91,7 @@ $fontWeightExtraBold: 800;
           flex-direction: row;
           align-items: center;
           .txtag {
-            color: #6C7B8A;
+            color: #6c7b8a;
             text-align: left;
             font-size: 9px;
             font-weight: $fontWeightMedium;
@@ -135,7 +102,6 @@ $fontWeightExtraBold: 800;
             padding: 4.5px 5px 4.5px 6px;
             margin-left: toVw(76);
             background-color: #f4f7f5;
-            
           }
           .txamount {
             flex-grow: 1;
@@ -151,8 +117,8 @@ $fontWeightExtraBold: 800;
               color: #656565;
               font-weight: $fontWeightRegular;
             }
-            &.credit{
-              color:#00A10B;
+            &.credit {
+              color: #00a10b;
             }
           }
         }
