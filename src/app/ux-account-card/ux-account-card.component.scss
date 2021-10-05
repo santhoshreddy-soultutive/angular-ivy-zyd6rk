@@ -1,0 +1,200 @@
+
+@function toVw($value) {
+  @return($value * 100/ 375) + vw;
+}
+
+@function toVh($value) {
+  @return ($value * 100/ 812) + vh;
+}
+
+$fontWeightLight: 300;
+$fontWeightRegular: 400;
+$fontWeightMedium: 500;
+$fontWeightSemiBold: 600;
+$fontWeightBold: 700;
+$fontWeightExtraBold: 800;
+
+.card {
+  width: toVw(214);
+  background-color: #ffffff;
+  border-radius: toVw(20);
+  margin: 0px;
+  margin-right: toVw(20);
+  flex-shrink: 0;
+  box-shadow: 0px 3px toVw(29) #00000029;
+  opacity: 1;
+  background-blend-mode: soft-light;
+  padding-bottom: toVh(13);
+}
+
+.active-card {
+  width: toVw(214);
+  padding-bottom: toVh(17);
+}
+
+.dock {
+  position: absolute;
+  width: toVw(326);
+  top: toVh(-29);
+  left: toVw(70);
+  padding-bottom: toVh(18);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  p {
+    margin-bottom: 0;
+    &.accountnumber {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      margin-top: toVh(14.83);
+      margin-left: toVw(16.54);
+      img {
+        opacity: 1;
+        width: toVw(23.9);
+        height: toVh(23.33);
+        margin-right: toVw(10.56);
+      }
+      span {
+        color: #656565;
+        opacity: 1;
+        text-align: left;
+        font-size: 10px;
+        font-weight: $fontWeightRegular;
+        letter-spacing: 0px;
+        line-height: 7px;
+      }
+    }
+  }
+
+  p {
+    &.accountname {
+      margin-top: toVh(11.84);
+      margin-left: toVw(16);
+
+      color: #656565;
+      opacity: 1;
+      text-align: left;
+      font-size: 10px;
+      font-weight: $fontWeightRegular;
+      letter-spacing: 0px;
+      line-height: 11px;
+      overflow-wrap: break-word;
+      max-width: 60%;
+    }
+  }
+
+  p {
+    &.balance {
+      margin-top: toVh(10);
+      margin-left: toVw(16.29);
+
+      color: #0b0b0b;
+      opacity: 1;
+      text-align: left;
+      font-size: 14px;
+      font-weight: $fontWeightBold;
+      letter-spacing: 0px;
+      line-height: 18px;
+      span {
+        font-weight: $fontWeightLight;
+      }
+    }
+  }
+
+  p {
+    &.availablebalance {
+      margin-top: toVh(-28.84);
+      margin-left: toVw(16.29);
+      opacity: 0;
+      span {
+        display: block;
+        color: #8d8d8d;
+        opacity: 1;
+        text-align: left;
+        font-size: 12px;
+        font-weight: $fontWeightMedium;
+        letter-spacing: -0.12px;
+        line-height: 14px;
+      }
+    }
+  }
+}
+
+.card {
+  &.active-card {
+    p {
+      &.accountnumber {
+        margin-top: toVh(12.83);
+        margin-left: toVw(12);
+        img {
+          width: toVw(24);
+          height: toVh(23.43);
+          opacity: 1;
+          margin-right: toVw(10);
+        }
+        span {
+          color: #656565;
+          opacity: 1;
+          text-align: left;
+          font-size: 10px;
+          font-weight: $fontWeightMedium;
+          letter-spacing: -0.1px;
+          line-height: 7px;
+        }
+      }
+    }
+
+    p {
+      &.accountname {
+        margin-top: toVh(18.74);
+        margin-left: toVw(12);
+        color: #656565;
+        opacity: 1;
+        text-align: left;
+        font-size: 12px;
+        font-weight: $fontWeightMedium;
+        letter-spacing: -0.12px;
+        line-height: 13px;
+
+        max-width: 90%;
+      }
+    }
+
+    p {
+      &.balance {
+        margin-top: toVh(5.16);
+        margin-left: toVw(12);
+        color: #0b0b0b;
+        opacity: 1;
+        text-align: left;
+        font-size: 17px;
+        font-weight: $fontWeightExtraBold;
+        letter-spacing: -0.17px;
+        line-height: 20px;
+        span {
+          font-weight: $fontWeightRegular;
+        }
+      }
+    }
+
+    p {
+      &.availablebalance {
+        margin-top: toVh(14.84);
+        margin-left: toVw(12);
+        opacity: 1;
+        span {
+          display: block;
+          text-align: left;
+          font-size: 12px;
+          font-weight: $fontWeightMedium;
+          letter-spacing: -0.12px;
+          line-height: 14px;
+        }
+      }
+    }
+  }
+}
